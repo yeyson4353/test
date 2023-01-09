@@ -2,8 +2,9 @@
 	$contador=0;
 	if($fd = fopen('counter.txt','r')){
 		$contador=fgets($fd);
+		fclose($fd);
 	}
-	fclose($fd);
+	
 	
 	$fd2 =  fopen('counter.txt','w');
 	$contador = $contador+1;
